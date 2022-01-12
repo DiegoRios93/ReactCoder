@@ -1,0 +1,32 @@
+nav{
+	display: flex;
+	justify-content: space-between;
+	padding-right: 50px;
+	border-bottom: 2px solid black;
+}
+
+h1{
+	padding: 12px;
+	padding-left: 40px;
+}
+
+
+ul{
+	display: flex;
+	padding-top: 25px;
+	justify-content: space-between;
+}
+
+.lista{
+	width: 40%;
+}
+
+li{
+	list-style: none;
+	align-items: flex-end;
+}
+
+a{
+	text-decoration: none;
+	color: black;
+}
