@@ -1,4 +1,6 @@
 import './NavBar.css';
+import Carrito from "../components/Carrito";
+import ItemList from "../components/ItemList";
 
 function NavBar () {
 	return <nav>
@@ -9,8 +11,8 @@ function NavBar () {
 			<ul>
 				<li><a href="!#">PRODUCTOS</a></li>
 				<li><a href="!#">MÁS VENDIDOS</a></li>
-				<li><a href="!#">CARRITO</a></li>
 				<li><a href="!#">CONTACTO</a></li>
+				<li><a href="!#"><Carrito /></a></li>
 			</ul>
 		</div>
 		

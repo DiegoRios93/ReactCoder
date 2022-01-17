@@ -1,0 +1,9 @@
+img{
+	width: 50px;
+	height: 40px;
+}
+
+.editarCarrito{
+	display: flex;
+	justify-content: flex-end;
+}

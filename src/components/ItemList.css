@@ -1,0 +1,10 @@
+.listaItems{
+	width: 50%;
+	text-align: center;
+	margin: auto;
+	border-bottom: solid 1px gray;
+}
+
+button{
+	margin-bottom: 10px;
+}
