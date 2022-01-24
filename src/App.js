@@ -1,18 +1,31 @@
 import './App.css';
 import NavBar from "./components/NavBar";
 import ItemList from "./components/ItemList";
+import { useEffect, useState } from "react";
+import { getProductos} from "./baseDatos";
 
 function App() {
- 
+
+  const [products, setProducts] = useState([]);
+
+  const [estaCargando, setEstaCargando] = useState(false);
+
+  useEffect(() => {
+    setEstaCargando(true)
+    getProductos()
+    .then((data) => setProducts(data))
+    .catch((error) => console.log(error))
+    .finally(() => setEstaCargando(false));
+  }, []);
+
   return (
     <div>
       <NavBar />
-      <ItemList paleta='Nox AT10 Luxury' precio='$62000' grosor='3.8mm' />
-      <ItemList paleta='Bullpadel Flow Light' precio='$42000' grosor='3.8mm' />
-      <ItemList paleta='Paleta Wilson Bela Pro Wr065511' precio='$95000' grosor='3.8mm' />
-      <ItemList paleta='Paleta Padel adidas Metalbone' precio='$86000' grosor='3.8mm' />
-      <ItemList paleta='Paleta Padel Bullpadel Hack Ctr' precio='69000' grosor='3.8mm' />
-      <ItemList paleta='Paleta De Padel adidas Adipower Master Ltd' precio='59000' grosor='3.8mm' />
+      {estaCargando ? ( 
+        <p>Cargando...</p> 
+        ) : (
+        products.map((product) => <ItemList key={product.id} product={product} />)
+        )}
     </div>
   );
 }

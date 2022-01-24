@@ -1,6 +1,6 @@
 import './NavBar.css';
 import Carrito from "../components/Carrito";
-import ItemList from "../components/ItemList";
+
 
 function NavBar () {
 	return <nav>

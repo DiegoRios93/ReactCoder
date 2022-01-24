@@ -1,11 +1,11 @@
 import './ItemList.css';
 import Contador from "../components/Contador";
 
-function ItemList ({paleta, precio, grosor}) {
+function ItemList ({product}) {
 	return <div className="listaItems">
-		<p>Paleta: {paleta}</p>
-		<p>Precio: {precio}</p>
-		<p>Grosor: {grosor}</p>
+		<p>Paleta: {product.paleta}</p>
+		<p>Precio: {product.precio}</p>
+		<p>Grosor: {product.grosor}</p>
 		<Contador />
 	    <button>Agregar al carrito</button>
 	</div>
