@@ -1,4 +1,4 @@
-export const PRODUCTS = [
+/*export const PRODUCTS = [
 	{
 		id: 0,
 		paleta: "Nox AT10 Luxury",
@@ -41,7 +41,23 @@ export const PRODUCTS = [
 		precio: 59600,
 		grosor: "3.8mm",
 	},
+];*/
+
+//Base de datos de producto con detalle
+
+export const PRODUCTS = [
+	{
+		id: 0,
+		paleta: "Nox AT10 Luxury",
+		descripcion: "Paleta ideal para jugadores defensivos, balance y peso que aportan control en cada jugada",
+		precio: 62000,
+		grosor: "3.8mm",
+		material: "Fibra de carbono",
+	},
 ];
+
+
+
 
 export function getProductos() {
 	return new Promise((resolve, reject) => {
