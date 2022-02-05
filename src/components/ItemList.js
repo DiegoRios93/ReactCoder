@@ -1,16 +1,21 @@
+
 import './ItemList.css';
 import Contador from "../components/Contador";
+import { useNavigate } from "react-router-dom";
 
 function ItemList ({product}) {
+
+	const navigate = useNavigate();
+
 	return <div className="listaItems">
-	<h2>Detalle del producto</h2>
 		<p>Paleta: {product.paleta}</p>
 		<p>Precio: {product.precio}</p>
 		<p>Grosor: {product.grosor}</p>
-		<p>Descripción : {product.descripcion}</p>
-		<p>Material : {product.material}</p>
+		<img src={product.img} alt={product.name} />
 		<Contador />
 	    <button>Agregar al carrito</button>
+	    <button onClick={()=> navigate(`${product.id}`)}>Ver más...</button>
+
 	</div>
 }
 

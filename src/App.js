@@ -1,33 +1,33 @@
 import './App.css';
 import NavBar from "./components/NavBar";
-import ItemList from "./components/ItemList";
-import { useEffect, useState } from "react";
-import { getProductos} from "./baseDatos";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import HomePage from "./pages/HomePage";
+import MasVendidosPage from "./pages/MasVendidosPage";
+import ContactoPage from "./pages/ContactoPage";
+import CarritoPage from "./pages/CarritoPage";
+import ProductoDetallePage from "./pages/ProductoDetallePage";
 
 function App() {
 
-  const [products, setProducts] = useState([]);
-
-  const [estaCargando, setEstaCargando] = useState(false);
-
-  useEffect(() => {
-    setEstaCargando(true)
-    getProductos()
-    .then((data) => setProducts(data))
-    .catch((error) => console.log(error))
-    .finally(() => setEstaCargando(false));
-  }, []);
-
   return (
-    <div>
-      <NavBar />
-      {estaCargando ? ( 
-        <p>Cargando...</p> 
-        ) : (
-        products.map((product) => <ItemList key={product.id} product={product} />)
-        )}
-    </div>
+    <BrowserRouter>
+    <NavBar />
+      <Routes>
+        <Route path="/">
+          <Route index element ={<HomePage />} />
+          <Route path=":productId" element ={<ProductoDetallePage />} />
+          <Route path="masvendidos" element ={<MasVendidosPage />} />
+          <Route path="contacto" element ={<ContactoPage />} />
+          <Route path="carrito" element ={<CarritoPage />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
 export default App;
+
+
+
+
+
