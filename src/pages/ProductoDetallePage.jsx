@@ -1,5 +1,6 @@
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
+import Contador from "../components/Contador";
 
 
 function ProductoDetalle() {
@@ -30,6 +31,8 @@ function ProductoDetalle() {
       <p>Precio:{product.precio}</p>
       <p>Grosor:{product.grosor}</p>
       <p>Stock: {product.stock}</p>
+      <Contador />
+      <button>Agregar al carrito</button>
     </div>
   );
   
