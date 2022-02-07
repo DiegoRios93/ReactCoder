@@ -1,20 +1,21 @@
-import React from "react";
 import './Contador.css';
 
-export default function Contador () {
-	const [conteo, setConteo] = React.useState(1);
+
+export default function Contador ({conteo, setConteo}) {
+	
+	
 
 	const sumar = () => {
-		setConteo(conteo+1);
+		setConteo((prev) => prev+1);
 	}
 
 	const restar = () => {
 		if(conteo > 1){
-			setConteo(conteo-1);
+			setConteo((prev) => prev-1);
 		}else{
 			alert("No se pueden agregar menos productos de 1 al carrito")
-		}
-	}
+		};
+	};
 
 	return (
 		<div className="divContador">

@@ -6,7 +6,7 @@
 			"precio": 62000,
 			"grosor": "3.8mm",
 			"stock": 50,
-			"img": "https://picsum.photos/200"
+			"img": "NoxPaleta.jpeg"
 		},
 		{
 			"id": 1,
@@ -14,7 +14,7 @@
 			"precio": 58000,
 			"grosor": "3.8mm",
 			"stock": 48,
-			"img": "https://picsum.photos/200"
+			"img": "BullPadelFlow.jpeg"
 		},
 		{
 			"id": 2,
@@ -22,7 +22,7 @@
 			"precio": 67500,
 			"grosor": "3.8mm",
 			"stock": 55,
-			"img": "https://picsum.photos/200"
+			"img": "PaletaBelaWilson.jpeg"
 		},
 		{
 			"id": 3,
@@ -30,7 +30,7 @@
 			"precio": 85000,
 			"grosor": "3.8mm",
 			"stock": 30,
-			"img": "https://picsum.photos/200"
+			"img": "AdidasMetalbone.jpeg"
 		},
 		{
 			"id": 4,
@@ -38,7 +38,7 @@
 			"precio": 72000,
 			"grosor": "3.8mm",
 			"stock": 40,
-			"img": "https://picsum.photos/200"
+			"img": "BullHackCtrl.jpeg"
 		},
 		{
 			"id": 5,
@@ -46,7 +46,7 @@
 			"precio": 69000,
 			"grosor": "3.8mm",
 			"stock": 90,
-			"img": "https://picsum.photos/200"
+			"img": "AdidasMaster.jpeg"
 		},
 		{
 			"id": 6,
@@ -54,7 +54,7 @@
 			"precio": 59600,
 			"grosor": "3.8mm",
 			"stock": 68,
-			"img": "https://picsum.photos/200"
+			"img": "PaletaMayor.jpeg"
 		}
 	]
 }
