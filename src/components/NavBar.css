@@ -3,6 +3,8 @@ nav{
 	justify-content: space-between;
 	padding-right: 50px;
 	border-bottom: 2px solid black;
+	background-color: #1c1b1a;
+	color: white;
 }
 
 h1{
@@ -28,5 +30,5 @@ li{
 
 a{
 	text-decoration: none;
-	color: black;
+	color: white;
 }

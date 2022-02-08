@@ -3,6 +3,7 @@ import Carrito from "../components/Carrito";
 import { Link } from "react-router-dom";
 
 
+
 function NavBar () {
 	return <nav>
 		<div>

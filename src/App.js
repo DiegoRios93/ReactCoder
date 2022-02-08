@@ -7,6 +7,8 @@ import ContactoPage from "./pages/ContactoPage";
 import CarritoPage from "./pages/CarritoPage";
 import ProductoDetallePage from "./pages/ProductoDetallePage";
 import { CartProvider } from "./context/CartContext";
+import Footer from "./components/Footer";
+
 
 function App() {
 
@@ -23,6 +25,7 @@ function App() {
             <Route path="carrito" element ={<CarritoPage />} />
           </Route>
         </Routes>
+        <Footer />
       </BrowserRouter>
     </CartProvider>
   );
