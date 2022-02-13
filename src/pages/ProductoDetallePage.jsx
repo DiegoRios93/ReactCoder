@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import Contador from "../components/Contador";
 import { useCart } from "../context/CartContext";
+import { getFirestore } from "../firebase/firebase";
 
 
 function ProductoDetalle() {
@@ -19,12 +20,25 @@ function ProductoDetalle() {
 
   useEffect(() => {
 
-    const URL = `http://localhost:3001/palas/${productId}`;
-    setEstaCargando(true)
-    fetch(URL)
-    .then((res) => res.json())
-    .then((data)=>setProduct(data))
+    const db = getFirestore();
+    const productsCollection = db.collection("palas");
+    const selectedProduct = productsCollection.doc(productId);
+
+    setEstaCargando(true);
+
+    selectedProduct.get()
+    .then((response) => {
+      if (!response.exists) console.log("No existe");
+      setProduct({...response.data(), id: response.id});
+    })
     .finally(()=> setEstaCargando(false));
+
+    //const URL = `http://localhost:3001/palas/${productId}`;
+    //setEstaCargando(true)
+    //fetch(URL)
+    //.then((res) => res.json())
+    //.then((data)=>setProduct(data))
+    //.finally(()=> setEstaCargando(false));
 
   }, [productId]);
 

@@ -6,6 +6,7 @@ import MasVendidosPage from "./pages/MasVendidosPage";
 import ContactoPage from "./pages/ContactoPage";
 import CarritoPage from "./pages/CarritoPage";
 import ProductoDetallePage from "./pages/ProductoDetallePage";
+import ConfirmacionCompraPage from "./pages/ConfirmacionCompraPage";
 import { CartProvider } from "./context/CartContext";
 import Footer from "./components/Footer";
 
@@ -23,6 +24,7 @@ function App() {
             <Route path="masvendidos" element ={<MasVendidosPage />} />
             <Route path="contacto" element ={<ContactoPage />} />
             <Route path="carrito" element ={<CarritoPage />} />
+            <Route path="confirmacion/:orderId" element ={<ConfirmacionCompraPage />} />
           </Route>
         </Routes>
         <Footer />
