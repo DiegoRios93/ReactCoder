@@ -25,7 +25,7 @@ function App() {
             <Route path="contacto" element ={<ContactoPage />} />
             <Route path="carrito" element ={<CarritoPage />} />
             <Route path="confirmacion/:orderId" element ={<ConfirmacionCompraPage />} />
-          </Route>
+          </Route>-
         </Routes>
         <Footer />
       </BrowserRouter>

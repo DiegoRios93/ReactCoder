@@ -1,13 +1,15 @@
 import './NavBar.css';
 import Carrito from "../components/Carrito";
 import { Link } from "react-router-dom";
+import padel from './asset/img/padel.png';
 
 
 
 function NavBar () {
+
 	return <nav>
 		<div>
-			<h1>PadelShop!</h1>
+			<h1 className="tituloShop">PadelShop!<img src={padel} alt="padel img" className="padelFoto"/></h1>
 		</div>
 		<div className="lista">
 			<ul>
@@ -20,7 +22,7 @@ function NavBar () {
 				<li>
 					<Link to="/contacto">CONTACTO</Link>
 				</li>
-				<li>
+				<li className="imagenCarrito">
 					<Link to="/carrito"><Carrito /></Link>
 				</li>
 			</ul>

@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import Contador from "../components/Contador";
 import { useCart } from "../context/CartContext";
 import { getFirestore } from "../firebase/firebase";
+import '../App.css';
 
 
 function ProductoDetalle() {
@@ -33,23 +34,17 @@ function ProductoDetalle() {
     })
     .finally(()=> setEstaCargando(false));
 
-    //const URL = `http://localhost:3001/palas/${productId}`;
-    //setEstaCargando(true)
-    //fetch(URL)
-    //.then((res) => res.json())
-    //.then((data)=>setProduct(data))
-    //.finally(()=> setEstaCargando(false));
-
+    
   }, [productId]);
 
   if (estaCargando || !product) return <p>Cargando...</p>; 
 
     return (
     
-      <div>
-        <h1>Descripción de paleta numero: {productId}</h1>
+      <div className="detalleDeProd">
+        <h1>Descripción de paleta</h1>
         <h2>{product.paleta}</h2>
-        <img src={require(`../components/asset/img/${product.img}`)} alt={product.name} />
+        <img className="imagenDetalle" src={require(`../components/asset/img/${product.img}`)} alt={product.name} />
         <p>Precio:{product.precio}</p>
         <p>Grosor:{product.grosor}</p>
         <p>Stock: {product.stock}</p>

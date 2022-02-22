@@ -6,9 +6,9 @@ import { useCart } from "../context/CartContext";
 
 function Carrito () {
 
-	const { cantidadProductos } = useCart();
+	const { cartQuantity } = useCart();
 	return <div className="editarCarrito">
-		<img src={carrito} alt="carrito img"/><p>({cantidadProductos})</p>
+		<img className="carritoFoto" src={carrito} alt="carrito img"/><p className="carritoCantidad">{ cartQuantity }</p>
 	</div>
 		
 }

@@ -7,11 +7,14 @@ nav{
 	color: white;
 }
 
-h1{
-	padding: 12px;
+.tituloShop{
 	padding-left: 40px;
 }
 
+.padelFoto{
+	width: 50px;
+	height: 40px;
+}
 
 ul{
 	display: flex;
@@ -32,3 +35,4 @@ a{
 	text-decoration: none;
 	color: white;
 }
+

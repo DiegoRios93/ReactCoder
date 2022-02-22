@@ -1,0 +1,61 @@
+*{
+	font-family: 'Roboto', sans-serif;
+}
+
+
+.itemsLista{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+.detalleDeProd{
+	text-align: center;
+	border: 1px solid black;
+	border-radius: 20px;
+	width: 50%;
+	margin: 30px;
+}
+
+.imagenDetalle{
+	width: 150px;
+}
+
+.parrafoMasV{
+	margin-left: 40px;
+}
+
+.listaMasV{
+	display: block;
+	padding-right: 40px;
+	text-align: justify;
+}
+
+.spanMasV{
+	font-style: italic;
+	font-weight: bold;
+	font-size: 19px;
+}
+
+.formularioContacto{
+	padding: 5px 30px;
+}
+
+.carritoPagina{
+	margin-left: 40px;
+}
+
+.padreTarjetas{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+.tarjetasCarrito{
+	width: 45%;
+	margin: 10px;
+	border: 1px solid black;
+	border-radius: 20px;
+	padding: 15px;
+	text-align: center;
+}

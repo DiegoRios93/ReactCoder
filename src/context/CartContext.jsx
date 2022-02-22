@@ -1,17 +1,40 @@
-import { createContext, useState, useContext } from "react";
+import { createContext, useState, useContext, useEffect } from "react";
 
 export const CartContext = createContext([]);
 
 export const CartProvider = ({children}) => {
 
 	const [cart, setCart] = useState([]);
-	const cantidadProductos = cart.length;
+
+    const [cartQuantity, setCartQuantity] = useState(0);
+
+
+   useEffect(() => {
+	 		const cantidadTotalProductos = cart.reduce(
+    		(total, { cantidad }) => total + Number(cantidad),
+    		0
+  			);
+  		setCartQuantity(cantidadTotalProductos);
+	}, [cart]);
+
 
 
 	const addItem = (item, cantidad) => {
 		const newItem = { item, cantidad };
-		console.log("Se agregó al carrito: ", newItem)
-		setCart((prevState) => [...prevState, newItem]);
+		const itemEsta = cart.find((order) => order.item.id === item.id);
+
+		if(itemEsta){
+			const actualizarCarrito = cart.map((order) => {
+				if(order.item.id === item.id){
+					return {...order, cantidad: cantidad + order.cantidad};
+				}else{
+					return order;
+				}
+			});
+			setCart(actualizarCarrito);
+		}else{
+			setCart((prevState) => [...prevState, newItem]);
+		}
 	};
 
 	const removeItem = (id) => {
@@ -24,7 +47,7 @@ export const CartProvider = ({children}) => {
 
 
 	return (
-		<CartContext.Provider value={{ cart, addItem, removeItem, clearAll, cantidadProductos }}>
+		<CartContext.Provider value={{ cart, addItem, removeItem, clearAll, cartQuantity }}>
 			{children}
 		</CartContext.Provider>
 	);

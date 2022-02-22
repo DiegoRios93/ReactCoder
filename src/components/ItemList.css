@@ -1,10 +1,30 @@
+.cards{
+}
+
 .listaItems{
-	width: 50%;
+	width: 30%;
 	text-align: center;
-	margin: auto;
-	border-bottom: solid 1px gray;
+	border: solid 2px black;
+	border-radius: 23px;
+	margin: 20px;
+}
+
+.paletasImg{
+	width: 145px;
+}
+
+.detallePaleta{
+	color: white;
+	padding-top: 10px;
+	background-color: #1c1b1a;
+	border-radius: 20px;
 }
 
 button{
 	margin-bottom: 10px;
+	background-color: orange;
+	border-radius: 10px;
+	font-size: 15px;
+	font-weight: bold;
+	padding: 5px 10px;
 }
