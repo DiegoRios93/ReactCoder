@@ -72,7 +72,7 @@ function MasVendidosPage() {
 
   return (
     <div>
-      <h1>Mas vendidos</h1>
+      <h1 className="centrar">Mas vendidos</h1>
       <p className="parrafoMasV">Sección en desarrollo, esperamos contar con más ventas para poder crear un ranking con las paletas mas pedidas y mas deseadas por los jugadores</p>
       <p className="parrafoMasV">Ve a la Home y continua eligiendo tu modelo favorito</p>
       <h2 className="parrafoMasV">Aquí debajo comentaremos varios puntos importantes a la hora de elegir tu paleta</h2>

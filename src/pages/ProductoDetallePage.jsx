@@ -16,6 +16,7 @@ function ProductoDetalle() {
 
   const handleClick = () => {
     addItem(product, conteo);
+    alert("Se agregó el producto correctamente a su cesta");
   };
 
 
@@ -37,7 +38,7 @@ function ProductoDetalle() {
     
   }, [productId]);
 
-  if (estaCargando || !product) return <p>Cargando...</p>; 
+  if (estaCargando || !product) return <p className="centradoLoadingDetalle">Cargando...</p>; 
 
     return (
     

@@ -43,6 +43,7 @@
 
 .carritoPagina{
 	margin-left: 40px;
+	min-height: 70vh;
 }
 
 .padreTarjetas{
@@ -52,10 +53,91 @@
 }
 
 .tarjetasCarrito{
-	width: 45%;
+	width: 46%;
 	margin: 10px;
 	border: 1px solid black;
 	border-radius: 20px;
 	padding: 15px;
 	text-align: center;
+}
+
+.centrar{
+	text-align: center;
+}
+
+.letraChica{
+	font-size: 12px;
+	padding: 5px;
+}
+
+.botonPagar{
+	background-color: lightgreen;
+	padding: 7px 15px;
+	border-radius: 15px;
+	font-size: 20px;
+	font-weight: bold;
+	text-transform: uppercase;
+	margin: 15px;
+}
+
+.confirmaCompra{
+	border: 5px solid #A9E335;
+	width: 45%;
+	margin: 40px auto;
+	border-radius: 50px;
+	background-color: #D3ECA7;
+	padding: 15px 0;
+}
+
+.minAlto{
+	min-height: 68vh;
+}
+
+.fontUno{
+	font-size: 25px;
+	font-weight: bold;
+	font-style: italic;
+}
+
+.fontDos{
+	font-size: 18px;
+}
+
+.fontTres{
+	font-size: 17;
+	font-style: oblique;
+}
+
+.formEstilo{
+	border-radius: 15px;
+	padding: 7px 10px;
+	border: none;
+}
+
+.confirmaForm{
+	border: 5px solid #A9E335;
+	width: 38%;
+	margin: 60px auto;
+	border-radius: 50px;
+	background-color: #D3ECA7;
+	padding: 15px 0;
+}
+
+/*Centrar Cargando...*/
+
+.centradoLoading{
+	margin: 50px auto;
+	font-size: 40px;
+	font-weight: bold;
+	min-height: 60vh;
+	font-style: oblique;
+}
+
+.centradoLoadingDetalle{
+	text-align: center;
+	margin: 50px;
+	font-size: 40px;
+	font-weight: bold;
+	min-height: 60vh;
+	font-style: oblique;
 }

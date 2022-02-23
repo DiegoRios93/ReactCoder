@@ -58,7 +58,7 @@ const { cart, removeItem, clearAll } = useCart();
 
   return (
     <div className="carritoPagina">
-      <h1>Carrito</h1>
+      <h1 className="centrar">Carrito</h1>
       <div className="padreTarjetas">
           {cart.map((purchase)=> {
             return <div key={purchase.item.id} className="tarjetasCarrito">
@@ -70,9 +70,10 @@ const { cart, removeItem, clearAll } = useCart();
             </div>
           })}
       </div>
+      <div className="centrar">
+      <button onClick={clearAll} className="letraChica">Borrar todos los productos</button>
       <h3>Precio final: ${getTotal(cart)}</h3>
-      <button onClick={clearAll}>Borrar todos los productos</button>
-      <h2>Introduzaca sus datos para finalizar la compra:</h2>
+      <h2>Introduzca sus datos para finalizar la compra</h2>
       <form onSubmit={handleSubmit}>
         <label htmlFor="name">Nombre completo </label>
         <input type="text" id="name" name="name" value={name} onChange={(e) => setName(e.target.value)} />
@@ -82,8 +83,9 @@ const { cart, removeItem, clearAll } = useCart();
         <input type="number" id="phone" name="phone" value={phone} onChange={(e) => setPhone(e.target.value)} />
         <br />
         <br />
-        <input type="submit" value="Confirmar compra" />
+        <input type="submit" value="Pagar y confirmar compra" className="botonPagar" />
       </form>
+      </div>
     </div>
   );
 }

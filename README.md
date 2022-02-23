@@ -1,6 +1,22 @@
-# Getting Started with Create React App
+# Proyecto creado con Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este proyecto fue iniciado con [Create React App](https://github.com/facebook/create-react-app).
+
+## Proyecto realizado para curso de React en CoderHouse
+
+## Detalles del proyecto
+
+### En este proyecto se utilizó:
+React-router-dom para linkear, navegar y crear rutas en el sitio web
+Hooks
+Context para compartir valores entre componentes sin tener que usar props
+Firebase en donde esta creada la base de datos
+.env para ocultar las key, en este caso no están en el .gitignore, para que el profesor pueda corregir
+Y muchos componentes, assets y demás para darle vida a este sitio
+
+## Como ver el proyecto
+
+### Para levantar el proyecto abrimos la terminal dentro, y lo iniciamos con `npm start`
 
 ## Available Scripts
 

@@ -15,7 +15,7 @@ function HomePage() {
 
     const db = getFirestore();
     const productsCollection = db.collection("palas");
-
+    setEstaCargando(true);
 
 
     const getDataFromFirestore = async () => {
@@ -24,7 +24,6 @@ function HomePage() {
         if(response.empty) {
         console.log("Esta vacio");
         };
-        setEstaCargando(true);
         setData(response.docs.map((doc) => ({...doc.data(), id: doc.id })));
       } catch (err) {
         setError(err);
@@ -40,7 +39,7 @@ function HomePage() {
   return (
     <div className="itemsLista">
       {estaCargando ? ( 
-        <p>Cargando...</p> 
+        <p className="centradoLoading">Cargando productos...</p> 
         ) : (
         data.map((product) => <ItemList key={product.id} product={product} />)
         )}

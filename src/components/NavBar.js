@@ -12,7 +12,7 @@ function NavBar () {
 			<h1 className="tituloShop">PadelShop!<img src={padel} alt="padel img" className="padelFoto"/></h1>
 		</div>
 		<div className="lista">
-			<ul>
+			<ul className="listaNav">
 				<li>
 					<Link to="/">HOME</Link>
 				</li>
